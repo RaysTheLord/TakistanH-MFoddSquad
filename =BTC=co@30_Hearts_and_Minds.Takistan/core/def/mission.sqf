@@ -410,7 +410,7 @@ btc_animals_type = ["Hen_random_F", "Cock_random_F", "Fin_random_F", "Alsatian_R
 //FOB
 btc_fob_mat = "Land_Cargo20_military_green_F";
 btc_fob_structure = "Land_Cargo_HQ_V3_F";
-btc_fob_flag = "FODDSQUADflag";
+btc_fob_flag = "FODDSQUADflag_v2";
 btc_fob_id = 0;
 btc_fob_minDistance = 1500;
 
