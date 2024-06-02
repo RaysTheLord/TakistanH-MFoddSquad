@@ -393,7 +393,8 @@ _p_civ_veh = _allfaction select _p_civ_veh; //Select faction selected from missi
 private _allclasse = [["CFP_C_AFG", "CFP_C_ME", "CUP_C_TK"]] call btc_civ_fnc_class; //Create classes from factions, you can combine factions from the SAME side : [[_p_civ, "btc_ac","LOP_TAK_CIV"]] call btc_civ_fnc_class.
 
 //Save class name to global variable
-btc_civ_type_units = (_allclasse select 0) append ["Max_Tak_woman1", "Max_Tak_woman2", "Max_Tak_woman3", "Max_Tak_woman4", "Max_Tak_woman5", "Max_Tak_woman6"];
+btc_civ_type_units = (_allclasse select 0);
+btc_civ_type_units  append ["Max_Tak_woman1", "Max_Tak_woman2", "Max_Tak_woman3", "Max_Tak_woman4", "Max_Tak_woman5", "Max_Tak_woman6"];
 _allclasse = [["CUP_C_TK"]] call btc_civ_fnc_class;
 btc_civ_type_veh = _allclasse select 2;
 btc_civ_type_boats = _allclasse select 1;

@@ -38,7 +38,7 @@ if (btc_debug_log) then {
 if (_rpos isEqualTo []) then {
     _rpos = [position _city, _area] call btc_fnc_randomize_pos;
 };
-if (_type_units isEqualTo "") then {
+if (_type_units isEqualTo "" || _type_units isEqualTo any) then {
     _type_units = selectRandom btc_civ_type_units;
 };
 
