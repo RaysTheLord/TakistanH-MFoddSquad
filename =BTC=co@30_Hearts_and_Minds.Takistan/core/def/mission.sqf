@@ -469,40 +469,15 @@ btc_player_type = ["SoldierWB", "SoldierEB", "SoldierGB"] select ([west, east, i
 btc_construction_array =
 [
     [
-        "Fortifications",
         "Static",
         "Ammobox",
         "Containers",
         "Supplies",
-        "FOB",
         "Decontamination",
-        "Vehicle Logistic"
+        "Vehicle Logistic",
+        "Humanitarian"
     ],
     [
-        [
-            //"Fortifications"
-            "Land_BagBunker_Small_F",
-            "Land_BagFence_Corner_F",
-            "Land_BagFence_End_F",
-            "Land_BagFence_Long_F",
-            "Land_BagFence_Round_F",
-            "Land_BagFence_Short_F",
-            "Land_HBarrier_1_F",
-            "Land_HBarrier_3_F",
-            "Land_HBarrier_5_F",
-            "Land_HBarrierBig_F",
-            "Land_Razorwire_F",
-            "Land_CncBarrier_F",
-            "Land_CncBarrierMedium_F",
-            "Land_CncBarrierMedium4_F",
-            "Land_CncWall1_F",
-            "Land_CncWall4_F",
-            "Land_Mil_ConcreteWall_F",
-            "Land_Mil_WallBig_4m_F",
-            "Land_Mil_WallBig_Corner_F",
-            "Land_PortableLight_double_F",
-            "Land_Pod_Heli_Transport_04_medevac_black_F"
-        ],
         [
             //"Static"
         ] + (_allClassSorted select {(
@@ -532,10 +507,6 @@ btc_construction_array =
             btc_supplies_cargo
         ],
         [
-            //"FOB"
-            btc_fob_mat
-        ],
-        [
             //"Decontamination"
             "DeconShower_01_F"
         ],
@@ -545,18 +516,24 @@ btc_construction_array =
             "ACE_Track",
             "B_Slingload_01_Ammo_F",
             "B_Slingload_01_Fuel_F"
-        ] + (_allClassSorted select {_x isKindOf "FlexibleTank_base_F"})
+        ] + (_allClassSorted select {_x isKindOf "FlexibleTank_base_F"}),
+        [
+            //"Humanitarian"
+            "Land_FoodSacks_01_cargo_brown_F",
+            "Land_WaterBottle_01_stack_F",
+            "CargoNet_01_box_F"
+        ]
     ]
 ];
 
 (btc_construction_array select 1) params [
-    "_cFortifications", "_cStatics", "_cAmmobox",
-    "_cContainers", "_cSupplies", "_cFOB",
-    "_cDecontamination", "_cVehicle_logistic"
+    "_cStatics", "_cAmmobox",
+    "_cContainers", "_cSupplies",
+    "_cDecontamination", "_cVehicle_logistic", "_cHumanitarian"
 ];
 btc_log_def_loadable = flatten (btc_construction_array select 1) + flatten btc_supplies_mat + btc_type_hazmat;
 btc_log_def_can_load = _cContainers;
-btc_log_def_placeable = (_cFortifications + _cContainers + _cSupplies + _cFOB + _cDecontamination + _cVehicle_logistic + flatten btc_supplies_mat + btc_type_hazmat) select {
+btc_log_def_placeable = (_cContainers + _cSupplies + _cDecontamination + _cVehicle_logistic + _cHumanitarian + flatten btc_supplies_mat + btc_type_hazmat) select {
     getNumber(_cfgVehicles >> _x >> "ace_dragging_canCarry") isEqualTo 0
 };
 btc_tow_vehicleTowing = objNull;

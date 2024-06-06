@@ -105,13 +105,13 @@ class Params {
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_RESP_TICKETSLOST"]);
         values[]={1,2,3,4,5,6,7,8,9,10};
         texts[]={"1","2","3","4","5","6","7","8","9","10"};
-        default = 1;
+        default = 2;
     };
     class btc_p_respawn_ticketsShare { // Tickets are share between:
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_RESP_TICKETSHARE"]);
         values[]={0,1};
         texts[]={$STR_BTC_HAM_RESP_SAMEFACTION, $STR_BTC_HAM_RESP_NOTSHARE};
-        default = 1;
+        default = 0;
     };
     class btc_p_respawn_ticketsFromPrisoners { // Attribute tickets from prisoners to (Enable only if tickets are not share):
         title = __EVAL(format ["      %1", localize "STR_BTC_HAM_RESP_TICKETPRISONER"]);
