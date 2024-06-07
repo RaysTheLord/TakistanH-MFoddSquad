@@ -704,7 +704,7 @@ btc_flag_textures = [
 ];
 
 //Respawn
-btc_body_bagTicketPlayer = 1;
+btc_body_bagTicketPlayer = 2;
 btc_body_prisonerTicket = 1;
 
 btc_startDate = [2024, 7, 6, 12, 15];
