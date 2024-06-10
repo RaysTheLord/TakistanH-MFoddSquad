@@ -3,13 +3,13 @@
     <Package name="Description">
         <Container name="Description: Main">
             <Key ID="STR_BTC_HAM_DESCR_NAME">
-                <Original>Hearts and Minds</Original>
-                <Spanish>Hearts and Minds</Spanish>
-                <German>Hearts and Minds</German>
-                <Portuguese>Corações e Mentes</Portuguese>
-                <Chinesesimp>心灵与智慧</Chinesesimp>
-                <French>Hearts and Minds</French>
-                <Czech>Hearts and Minds</Czech>
+                <Original>Operation Enduring Liberty</Original>
+                <Spanish>Operation Enduring Liberty</Spanish>
+                <German>Operation Enduring Liberty</German>
+                <Portuguese>Operation Enduring Liberty</Portuguese>
+                <Chinesesimp>Operation Enduring Liberty</Chinesesimp>
+                <French>Operation Enduring LibertyMinds</French>
+                <Czech>Operation Enduring Liberty</Czech>
             </Key>
             <Key ID="STR_BTC_HAM_DESCR_MISSION">
                 <Original>github.com/Vdauphin/HeartsAndMinds</Original>
