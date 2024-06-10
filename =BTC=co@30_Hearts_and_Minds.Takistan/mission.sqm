@@ -20,7 +20,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=985;
+		nextID=1065;
 	};
 	class Camera
 	{
@@ -1335,7 +1335,7 @@ dlcs[]=
 randomSeed=2442963;
 class ScenarioData
 {
-	author="RTLP2";
+	author="RTLP2 and HoodleDoodle";
 	disabledAI=1;
 	class Header
 	{
@@ -58447,14 +58447,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="unitInsignia";
-									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="ADFU_insignia_sasr_patch";
+											singleType="BOOL";
+											value=1;
 										};
 									};
 								};
@@ -58486,14 +58486,14 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									property="unitInsignia";
+									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 									class Value
 									{
 										class data
 										{
-											singleType="BOOL";
-											value=1;
+											singleType="STRING";
+											value="ADFU_insignia_sasr_patch";
 										};
 									};
 								};
@@ -64225,14 +64225,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									property="unitInsignia";
+									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 									class Value
 									{
 										class data
 										{
-											singleType="BOOL";
-											value=1;
+											singleType="STRING";
+											value="USP_PATCH_NATO_ISAF_ROUNDEL_TAN";
 										};
 									};
 								};
@@ -64264,14 +64264,14 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="unitInsignia";
-									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="USP_PATCH_NATO_ISAF_ROUNDEL_TAN";
+											singleType="BOOL";
+											value=1;
 										};
 									};
 								};
@@ -64428,14 +64428,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									property="unitInsignia";
+									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 									class Value
 									{
 										class data
 										{
-											singleType="BOOL";
-											value=1;
+											singleType="STRING";
+											value="USP_PATCH_NATO_ISAF_ROUNDEL_TAN";
 										};
 									};
 								};
@@ -64467,14 +64467,14 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="unitInsignia";
-									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="USP_PATCH_NATO_ISAF_ROUNDEL_TAN";
+											singleType="BOOL";
+											value=1;
 										};
 									};
 								};
@@ -68784,19 +68784,6 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute5
-								{
 									property="unitInsignia";
 									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 									class Value
@@ -68805,6 +68792,19 @@ class Mission
 										{
 											singleType="STRING";
 											value="CUP_insignia_spc_airborne_ranger";
+										};
+									};
+								};
+								class Attribute5
+								{
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
 										};
 									};
 								};
@@ -69321,14 +69321,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="unitInsignia";
-									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="Insignia_FODDSQUAD3";
+											singleType="BOOL";
+											value=1;
 										};
 									};
 								};
@@ -69360,14 +69360,14 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									property="unitInsignia";
+									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 									class Value
 									{
 										class data
 										{
-											singleType="BOOL";
-											value=1;
+											singleType="STRING";
+											value="Insignia_FODDSQUAD3";
 										};
 									};
 								};
@@ -69514,19 +69514,6 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute5
-								{
 									property="unitInsignia";
 									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 									class Value
@@ -69535,6 +69522,19 @@ class Mission
 										{
 											singleType="STRING";
 											value="ADFU_insignia_2_cdo_patch";
+										};
+									};
+								};
+								class Attribute5
+								{
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
 										};
 									};
 								};
