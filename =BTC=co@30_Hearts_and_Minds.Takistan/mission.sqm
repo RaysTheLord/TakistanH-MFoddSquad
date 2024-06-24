@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1265;
+		nextID=1305;
 	};
 	class Camera
 	{
-		pos[]={9994.6104,189.96056,9906.3135};
-		dir[]={-0.43860039,-0.48398134,0.75724417};
-		up[]={-0.24257991,0.87507266,0.41881448};
-		aside[]={0.86534476,-3.8534927e-007,0.50121337};
+		pos[]={10018.42,200.7018,10032.186};
+		dir[]={0.49336526,-0.58941388,0.63967824};
+		up[]={0.359972,0.80782855,0.46672556};
+		aside[]={0.79184574,-8.8155502e-008,-0.61072874};
 	};
 };
 binarizationWanted=0;
@@ -12418,18 +12418,6 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="ARRAY";
-				};
-			};
-		};
-		class Attribute1
-		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -12438,6 +12426,18 @@ class CustomAttributes
 				{
 					singleType="SCALAR";
 					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
 				};
 			};
 		};
@@ -13208,8 +13208,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={10018.341,190.58124,10021.435};
-						angles[]={0.0207968,0.68966222,6.249599};
+						position[]={10018.341,190.58113,10021.435};
+						angles[]={0.020804325,0.68966687,6.2496047};
 					};
 					side="Empty";
 					flags=4;
@@ -13218,7 +13218,23 @@ class Mission
 					};
 					id=1673;
 					type="CFP_B_USRANGERS_CH_47F_WDL_01";
-					atlOffset=0.00010681152;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ammoBox";
+							expression="[_this,_value] call bis_fnc_initAmmoBox;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[[[""CUP_arifle_M4A1_SOMMOD_black"",""CUP_launch_M136_Loaded"",""FirstAidKit"",""Medikit""],[2,1,10,1]],[[""CUP_30Rnd_556x45_Stanag"",""CUP_M136_M"",""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[20,2,2,2,2]],[[""ToolKit"",""ACE_bodyBag""],[1,10]],[[""CFP_Kitbag_MCam_Grn""],[4]]],false]";
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item2
 				{
@@ -13247,7 +13263,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="[[[[""CUP_arifle_M4A1"",""FirstAidKit""],[1,4]],[[""CUP_30Rnd_556x45_Stanag"",""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[10,2,2,2]],[[],[]],[[],[]]],false]";
+									value="[[[[""CUP_arifle_M4A1"",""FirstAidKit""],[1,4]],[[""CUP_30Rnd_556x45_Stanag"",""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[10,2,2,2]],[[""ACE_bodyBag""],[10]],[[],[]]],false]";
 								};
 							};
 						};
@@ -13260,7 +13276,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10016.589,187.5412,10058.6};
-						angles[]={0.043172773,0.76176113,0};
+						angles[]={0.043179445,0.76176637,0};
 					};
 					side="Empty";
 					flags=4;
@@ -13270,6 +13286,23 @@ class Mission
 					id=1674;
 					type="CUP_B_UH60M_FFV_US";
 					atlOffset=1.5258789e-005;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ammoBox";
+							expression="[_this,_value] call bis_fnc_initAmmoBox;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[[[[""CUP_arifle_M4A1"",""FirstAidKit""],[1,4]],[[""CUP_30Rnd_556x45_Stanag"",""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[10,2,2,2]],[[""ACE_bodyBag""],[10]],[[],[]]],false]";
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item4
 				{
@@ -32285,6 +32318,7 @@ class Mission
 				{
 					dataType="Layer";
 					name="Armory";
+					state=1;
 					class Entities
 					{
 						items=133;
@@ -34211,7 +34245,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={9977.2002,191.11038,9931.8438};
+								position[]={9976.04,191.11038,9933.0605};
+								angles[]={-0,3.8748772,0};
 							};
 							side="Empty";
 							flags=4;
@@ -64815,14 +64850,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
 									class Value
 									{
 										class data
 										{
 											singleType="BOOL";
-											value=0;
+											value=1;
 										};
 									};
 								};
@@ -64854,19 +64889,6 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute5
-								{
 									property="unitInsignia";
 									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 									class Value
@@ -64875,6 +64897,19 @@ class Mission
 										{
 											singleType="STRING";
 											value="ADFU_insignia_sasr_patch";
+										};
+									};
+								};
+								class Attribute5
+								{
+									property="enableStamina";
+									expression="_this enablestamina _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
 										};
 									};
 								};
@@ -70593,14 +70628,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="unitInsignia";
+									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 									class Value
 									{
 										class data
 										{
-											singleType="BOOL";
-											value=0;
+											singleType="STRING";
+											value="USP_PATCH_NATO_ISAF_ROUNDEL_TAN";
 										};
 									};
 								};
@@ -70632,19 +70667,6 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="unitInsignia";
-									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="USP_PATCH_NATO_ISAF_ROUNDEL_TAN";
-										};
-									};
-								};
-								class Attribute5
-								{
 									property="hideObject";
 									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
 									class Value
@@ -70653,6 +70675,19 @@ class Mission
 										{
 											singleType="BOOL";
 											value=1;
+										};
+									};
+								};
+								class Attribute5
+								{
+									property="enableStamina";
+									expression="_this enablestamina _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
 										};
 									};
 								};
@@ -70796,14 +70831,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="unitInsignia";
+									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 									class Value
 									{
 										class data
 										{
-											singleType="BOOL";
-											value=0;
+											singleType="STRING";
+											value="USP_PATCH_NATO_ISAF_ROUNDEL_TAN";
 										};
 									};
 								};
@@ -70835,19 +70870,6 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="unitInsignia";
-									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
-									class Value
-									{
-										class data
-										{
-											singleType="STRING";
-											value="USP_PATCH_NATO_ISAF_ROUNDEL_TAN";
-										};
-									};
-								};
-								class Attribute5
-								{
 									property="hideObject";
 									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
 									class Value
@@ -70856,6 +70878,19 @@ class Mission
 										{
 											singleType="BOOL";
 											value=1;
+										};
+									};
+								};
+								class Attribute5
+								{
+									property="enableStamina";
+									expression="_this enablestamina _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
 										};
 									};
 								};
@@ -75113,14 +75148,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
 											singleType="BOOL";
-											value=1;
+											value=0;
 										};
 									};
 								};
@@ -75165,14 +75200,14 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
 									class Value
 									{
 										class data
 										{
 											singleType="BOOL";
-											value=0;
+											value=1;
 										};
 									};
 								};
@@ -75689,14 +75724,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
 									class Value
 									{
 										class data
 										{
 											singleType="BOOL";
-											value=0;
+											value=1;
 										};
 									};
 								};
@@ -75728,19 +75763,6 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute5
-								{
 									property="unitInsignia";
 									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 									class Value
@@ -75749,6 +75771,19 @@ class Mission
 										{
 											singleType="STRING";
 											value="Insignia_FODDSQUAD3";
+										};
+									};
+								};
+								class Attribute5
+								{
+									property="enableStamina";
+									expression="_this enablestamina _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
 										};
 									};
 								};
@@ -75843,14 +75878,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
 											singleType="BOOL";
-											value=1;
+											value=0;
 										};
 									};
 								};
@@ -75895,14 +75930,14 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
 									class Value
 									{
 										class data
 										{
 											singleType="BOOL";
-											value=0;
+											value=1;
 										};
 									};
 								};
@@ -82377,7 +82412,7 @@ class Mission
 										singleType="ARRAY";
 										class value
 										{
-											items=4112;
+											items=4514;
 											class Item0
 											{
 												class data
@@ -115272,6 +115307,3222 @@ class Mission
 												{
 													singleType="STRING";
 													value="CUP_launch_RPG26";
+												};
+											};
+											class Item4112
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK47_Early";
+												};
+											};
+											class Item4113
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK47_GL_Early";
+												};
+											};
+											class Item4114
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK101";
+												};
+											};
+											class Item4115
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK101_top_rail";
+												};
+											};
+											class Item4116
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK101_railed";
+												};
+											};
+											class Item4117
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK101_GL";
+												};
+											};
+											class Item4118
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK101_GL_railed";
+												};
+											};
+											class Item4119
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK101_GL_top_rail";
+												};
+											};
+											class Item4120
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK102";
+												};
+											};
+											class Item4121
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK102_top_rail";
+												};
+											};
+											class Item4122
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK102_railed";
+												};
+											};
+											class Item4123
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK103";
+												};
+											};
+											class Item4124
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK103_top_rail";
+												};
+											};
+											class Item4125
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK103_railed";
+												};
+											};
+											class Item4126
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK103_GL";
+												};
+											};
+											class Item4127
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK103_GL_top_rail";
+												};
+											};
+											class Item4128
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK103_GL_railed";
+												};
+											};
+											class Item4129
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK104";
+												};
+											};
+											class Item4130
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK104_top_rail";
+												};
+											};
+											class Item4131
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK104_railed";
+												};
+											};
+											class Item4132
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK105";
+												};
+											};
+											class Item4133
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK105_top_rail";
+												};
+											};
+											class Item4134
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK105_railed";
+												};
+											};
+											class Item4135
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK107";
+												};
+											};
+											class Item4136
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK107_top_rail";
+												};
+											};
+											class Item4137
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK107_railed";
+												};
+											};
+											class Item4138
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK107_GL";
+												};
+											};
+											class Item4139
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK107_GL_top_rail";
+												};
+											};
+											class Item4140
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK107_GL_railed";
+												};
+											};
+											class Item4141
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK108";
+												};
+											};
+											class Item4142
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK108_top_rail";
+												};
+											};
+											class Item4143
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK108_GL";
+												};
+											};
+											class Item4144
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK108_GL_top_rail";
+												};
+											};
+											class Item4145
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK108_railed";
+												};
+											};
+											class Item4146
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK108_GL_railed";
+												};
+											};
+											class Item4147
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK109";
+												};
+											};
+											class Item4148
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK109_top_rail";
+												};
+											};
+											class Item4149
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK109_railed";
+												};
+											};
+											class Item4150
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK109_GL";
+												};
+											};
+											class Item4151
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK109_GL_top_rail";
+												};
+											};
+											class Item4152
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK109_GL_railed";
+												};
+											};
+											class Item4153
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK12_black";
+												};
+											};
+											class Item4154
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK12_AFG_arid";
+												};
+											};
+											class Item4155
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK12_AFG_tan";
+												};
+											};
+											class Item4156
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK12_AFG_black";
+												};
+											};
+											class Item4157
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK12_arid";
+												};
+											};
+											class Item4158
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK12_VG_arid";
+												};
+											};
+											class Item4159
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK12_VG_tan";
+												};
+											};
+											class Item4160
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK12_VG_winter";
+												};
+											};
+											class Item4161
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK12_VG_wood";
+												};
+											};
+											class Item4162
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK12_VG_black";
+												};
+											};
+											class Item4163
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK12_lush";
+												};
+											};
+											class Item4164
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK12_tan";
+												};
+											};
+											class Item4165
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK12_GP34_black";
+												};
+											};
+											class Item4166
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK12_GP34_arid";
+												};
+											};
+											class Item4167
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK12_GP34_tan";
+												};
+											};
+											class Item4168
+											{
+												class data
+												{
+													singleType="STRING";
+													value="arifle_AK12_F";
+												};
+											};
+											class Item4169
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK15_black";
+												};
+											};
+											class Item4170
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK15_AFG_arid";
+												};
+											};
+											class Item4171
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK15_AFG_tan";
+												};
+											};
+											class Item4172
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK15_AFG_black";
+												};
+											};
+											class Item4173
+											{
+												class data
+												{
+													singleType="STRING";
+													value="arifle_AK12_arid_F";
+												};
+											};
+											class Item4174
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK15_arid";
+												};
+											};
+											class Item4175
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK15_VG_arid";
+												};
+											};
+											class Item4176
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK15_VG_tan";
+												};
+											};
+											class Item4177
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK15_VG_black";
+												};
+											};
+											class Item4178
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK15_tan";
+												};
+											};
+											class Item4179
+											{
+												class data
+												{
+													singleType="STRING";
+													value="arifle_AK12_GL_F";
+												};
+											};
+											class Item4180
+											{
+												class data
+												{
+													singleType="STRING";
+													value="arifle_AK12_GL_arid_F";
+												};
+											};
+											class Item4181
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK15_GP34_black";
+												};
+											};
+											class Item4182
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK15_GP34_arid";
+												};
+											};
+											class Item4183
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK15_GP34_tan";
+												};
+											};
+											class Item4184
+											{
+												class data
+												{
+													singleType="STRING";
+													value="arifle_AK12U_arid_F";
+												};
+											};
+											class Item4185
+											{
+												class data
+												{
+													singleType="STRING";
+													value="arifle_AK12U_F";
+												};
+											};
+											class Item4186
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK19_black";
+												};
+											};
+											class Item4187
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK19_AFG_arid";
+												};
+											};
+											class Item4188
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK19_AFG_tan";
+												};
+											};
+											class Item4189
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK19_AFG_black";
+												};
+											};
+											class Item4190
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK19_arid";
+												};
+											};
+											class Item4191
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK19_VG_arid";
+												};
+											};
+											class Item4192
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK19_VG_tan";
+												};
+											};
+											class Item4193
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK19_VG_black";
+												};
+											};
+											class Item4194
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK19_tan";
+												};
+											};
+											class Item4195
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK19_GP34_arid";
+												};
+											};
+											class Item4196
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK19_GP34_tan";
+												};
+											};
+											class Item4197
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK74_Early";
+												};
+											};
+											class Item4198
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK74_GL_Early";
+												};
+											};
+											class Item4199
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK74M";
+												};
+											};
+											class Item4200
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK74M_desert";
+												};
+											};
+											class Item4201
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK74M_top_rail_desert";
+												};
+											};
+											class Item4202
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK74M_top_rail";
+												};
+											};
+											class Item4203
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK74M_railed_afg_desert";
+												};
+											};
+											class Item4204
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK74M_railed_afg";
+												};
+											};
+											class Item4205
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK74M_railed_desert";
+												};
+											};
+											class Item4206
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK74M_railed";
+												};
+											};
+											class Item4207
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK74M_railed_afg_camo";
+												};
+											};
+											class Item4208
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK74M_GL";
+												};
+											};
+											class Item4209
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK74M_GL_desert";
+												};
+											};
+											class Item4210
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK74M_GL_top_rail_desert";
+												};
+											};
+											class Item4211
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK74M_GL_top_rail";
+												};
+											};
+											class Item4212
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK74M_GL_railed_desert";
+												};
+											};
+											class Item4213
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK74M_GL_railed";
+												};
+											};
+											class Item4214
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK74M_GL_railed_camo";
+												};
+											};
+											class Item4215
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK74";
+												};
+											};
+											class Item4216
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK74_top_rail";
+												};
+											};
+											class Item4217
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK74_GL";
+												};
+											};
+											class Item4218
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK74_GL_top_rail";
+												};
+											};
+											class Item4219
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CFP_AK12_Desert";
+												};
+											};
+											class Item4220
+											{
+												class data
+												{
+													singleType="STRING";
+													value="arifle_AKM_F";
+												};
+											};
+											class Item4221
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKM_GL_Early";
+												};
+											};
+											class Item4222
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKM";
+												};
+											};
+											class Item4223
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKM_top_rail";
+												};
+											};
+											class Item4224
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKMN_railed";
+												};
+											};
+											class Item4225
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKMN_railed_afg";
+												};
+											};
+											class Item4226
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKMN_railed_afg_desert";
+												};
+											};
+											class Item4227
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKMN_railed_desert";
+												};
+											};
+											class Item4228
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKM_GL";
+												};
+											};
+											class Item4229
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKM_GL_top_rail";
+												};
+											};
+											class Item4230
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKMS_Early";
+												};
+											};
+											class Item4231
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKMS_GL_Early";
+												};
+											};
+											class Item4232
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKMS";
+												};
+											};
+											class Item4233
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKMS_top_rail";
+												};
+											};
+											class Item4234
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKMS_GL";
+												};
+											};
+											class Item4235
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKMS_GL_top_rail";
+												};
+											};
+											class Item4236
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK47";
+												};
+											};
+											class Item4237
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK47_top_rail";
+												};
+											};
+											class Item4238
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK47_GL";
+												};
+											};
+											class Item4239
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AK47_GL_top_rail";
+												};
+											};
+											class Item4240
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKS";
+												};
+											};
+											class Item4241
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKS_top_rail";
+												};
+											};
+											class Item4242
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKS74_Early";
+												};
+											};
+											class Item4243
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKS74_GL_Early";
+												};
+											};
+											class Item4244
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKS74";
+												};
+											};
+											class Item4245
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKS74_top_rail";
+												};
+											};
+											class Item4246
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKS74_GL";
+												};
+											};
+											class Item4247
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKS74_GL_top_rail";
+												};
+											};
+											class Item4248
+											{
+												class data
+												{
+													singleType="STRING";
+													value="arifle_AKS_F";
+												};
+											};
+											class Item4249
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKS74U";
+												};
+											};
+											class Item4250
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKS74U_top_rail";
+												};
+											};
+											class Item4251
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_arifle_AKS74U_railed";
+												};
+											};
+											class Item4252
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_PSO_1_1";
+												};
+											};
+											class Item4253
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_PGO7V2";
+												};
+											};
+											class Item4254
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_PGO7V";
+												};
+											};
+											class Item4255
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_Kobra";
+												};
+											};
+											class Item4256
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_OKP_7_d_rail";
+												};
+											};
+											class Item4257
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_PGO7V3";
+												};
+											};
+											class Item4258
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_PSO_3_open";
+												};
+											};
+											class Item4259
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_1P87_RIS";
+												};
+											};
+											class Item4260
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_PechenegScope";
+												};
+											};
+											class Item4261
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_1P87_RIS_desert";
+												};
+											};
+											class Item4262
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_PSO_1_open";
+												};
+											};
+											class Item4263
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_PSO_1_1_open";
+												};
+											};
+											class Item4264
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_PSO_1";
+												};
+											};
+											class Item4265
+											{
+												class data
+												{
+													singleType="STRING";
+													value="ADFU_optic_ElcanS_b";
+												};
+											};
+											class Item4266
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_OKP_7_w_rail";
+												};
+											};
+											class Item4267
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_OKP_7_rail";
+												};
+											};
+											class Item4268
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_1P87_1P90_BLK";
+												};
+											};
+											class Item4269
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_PSO_3";
+												};
+											};
+											class Item4270
+											{
+												class data
+												{
+													singleType="STRING";
+													value="ADFU_optic_ElcanS";
+												};
+											};
+											class Item4271
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_OKP_7";
+												};
+											};
+											class Item4272
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_PSO_1_AK_open";
+												};
+											};
+											class Item4273
+											{
+												class data
+												{
+													singleType="STRING";
+													value="ADFU_optic_EoMAG";
+												};
+											};
+											class Item4274
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_PSO_1_AK";
+												};
+											};
+											class Item4275
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_1p63";
+												};
+											};
+											class Item4276
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_1P87_RIS_woodland";
+												};
+											};
+											class Item4277
+											{
+												class data
+												{
+													singleType="STRING";
+													value="ADFU_optic_ElcanC79";
+												};
+											};
+											class Item4278
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_ekp_8_02";
+												};
+											};
+											class Item4279
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_OKP_7_w";
+												};
+											};
+											class Item4280
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_optic_OKP_7_d";
+												};
+											};
+											class Item4281
+											{
+												class data
+												{
+													singleType="STRING";
+													value="ACE_muzzle_mzls_H";
+												};
+											};
+											class Item4282
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_snds_KZRZP_AK545";
+												};
+											};
+											class Item4283
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_mfsup_Flashhider_556x45_Tan";
+												};
+											};
+											class Item4284
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_mfsup_Flashhider_762x51_Tan";
+												};
+											};
+											class Item4285
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_mfsup_Flashhider_556x45_OD";
+												};
+											};
+											class Item4286
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_mfsup_Flashhider_762x51_OD";
+												};
+											};
+											class Item4287
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_snds_KZRZP_AK762";
+												};
+											};
+											class Item4288
+											{
+												class data
+												{
+													singleType="STRING";
+													value="ACE_muzzle_mzls_L";
+												};
+											};
+											class Item4289
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_mfsup_Flashhider_762x51_Black";
+												};
+											};
+											class Item4290
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_mfsup_SCAR_H";
+												};
+											};
+											class Item4291
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_mfsup_Flashhider_545x39_Black";
+												};
+											};
+											class Item4292
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_mfsup_Flashhider_556x45_Black";
+												};
+											};
+											class Item4293
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_fh_MP5";
+												};
+											};
+											class Item4294
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_snds_KZRZP_AK545_desert";
+												};
+											};
+											class Item4295
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_mfsup_Flashhider_545x39_OD";
+												};
+											};
+											class Item4296
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_mfsup_Flashhider_545x39_Tan";
+												};
+											};
+											class Item4297
+											{
+												class data
+												{
+													singleType="STRING";
+													value="muzzle_snds_H_MG";
+												};
+											};
+											class Item4298
+											{
+												class data
+												{
+													singleType="STRING";
+													value="muzzle_snds_H_MG_khk_F";
+												};
+											};
+											class Item4299
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_Bizon";
+												};
+											};
+											class Item4300
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_snds_KZRZP_AK545_woodland";
+												};
+											};
+											class Item4301
+											{
+												class data
+												{
+													singleType="STRING";
+													value="ACE_muzzle_mzls_smg_01";
+												};
+											};
+											class Item4302
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_snds_KZRZP_AK762_woodland";
+												};
+											};
+											class Item4303
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_mfsup_SCAR_L";
+												};
+											};
+											class Item4304
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_snds_KZRZP_AK762_desert";
+												};
+											};
+											class Item4305
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_mfsup_Flashhider_762x39_Black";
+												};
+											};
+											class Item4306
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_PBS4";
+												};
+											};
+											class Item4307
+											{
+												class data
+												{
+													singleType="STRING";
+													value="ACE_muzzle_mzls_B";
+												};
+											};
+											class Item4308
+											{
+												class data
+												{
+													singleType="STRING";
+													value="ACE_muzzle_mzls_smg_02";
+												};
+											};
+											class Item4309
+											{
+												class data
+												{
+													singleType="STRING";
+													value="ACE_muzzle_mzls_338";
+												};
+											};
+											class Item4310
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_mfsup_Flashhider_762x39_Tan";
+												};
+											};
+											class Item4311
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_muzzle_mfsup_Flashhider_762x39_OD";
+												};
+											};
+											class Item4312
+											{
+												class data
+												{
+													singleType="STRING";
+													value="muzzle_snds_H_MG_blk_F";
+												};
+											};
+											class Item4313
+											{
+												class data
+												{
+													singleType="STRING";
+													value="ACE_muzzle_mzls_93mmg";
+												};
+											};
+											class Item4314
+											{
+												class data
+												{
+													singleType="STRING";
+													value="20Rnd_mas_nor_762x51_Mag";
+												};
+											};
+											class Item4315
+											{
+												class data
+												{
+													singleType="STRING";
+													value="ADFU_100Rnd_556x45";
+												};
+											};
+											class Item4316
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_mas_can_556x45sd_Stanag";
+												};
+											};
+											class Item4317
+											{
+												class data
+												{
+													singleType="STRING";
+													value="150Rnd_556x45_Drum_Sand_Mag_Tracer_F";
+												};
+											};
+											class Item4318
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_556x45_AK19_M";
+												};
+											};
+											class Item4319
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_mas_ukl_556x45_Stanag";
+												};
+											};
+											class Item4320
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_100Rnd_TE1_Red_Tracer_556x45_BetaCMag_ar15";
+												};
+											};
+											class Item4321
+											{
+												class data
+												{
+													singleType="STRING";
+													value="RPG7_F";
+												};
+											};
+											class Item4322
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_Subsonic_762x39_AK103_bakelite_M";
+												};
+											};
+											class Item4323
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_100Rnd_TE1_Green_Tracer_556x45_BetaCMag";
+												};
+											};
+											class Item4324
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_545x39_AK74M_camo_M";
+												};
+											};
+											class Item4325
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_100Rnd_TE1_Yellow_Tracer_556x45_BetaCMag";
+												};
+											};
+											class Item4326
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Green_Tracer_545x39_AK_desert_M";
+												};
+											};
+											class Item4327
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK_M";
+												};
+											};
+											class Item4328
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_545x39_AK74M_M";
+												};
+											};
+											class Item4329
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_PG7VM_M";
+												};
+											};
+											class Item4330
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_Subsonic_545x39_AK74_plum_M";
+												};
+											};
+											class Item4331
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_FlareRed_GP25_M";
+												};
+											};
+											class Item4332
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_mas_nor_9x21sd_Stanag";
+												};
+											};
+											class Item4333
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_556x45_TE1_Tracer_Green_AK19_Tan_M";
+												};
+											};
+											class Item4334
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_556x45_Tracer_Red_AK19_M";
+												};
+											};
+											class Item4335
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_100Rnd_556x45_BetaCMag_wdl";
+												};
+											};
+											class Item4336
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_762x39_AK15_M";
+												};
+											};
+											class Item4337
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_100Rnd_556x45_BetaCMag_camo";
+												};
+											};
+											class Item4338
+											{
+												class data
+												{
+													singleType="STRING";
+													value="20Rnd_mas_ukl_762x51sd_Mag";
+												};
+											};
+											class Item4339
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Green_Tracer_762x39_AK15_Desert_M";
+												};
+											};
+											class Item4340
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_100Rnd_556x45_BetaCMag";
+												};
+											};
+											class Item4341
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_762x39_AKM_bakelite_desert_M";
+												};
+											};
+											class Item4342
+											{
+												class data
+												{
+													singleType="STRING";
+													value="200Rnd_mas_fra_556x45SD_Drum_Mag_F";
+												};
+											};
+											class Item4343
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_mas_fra_556x45_Stanag";
+												};
+											};
+											class Item4344
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_545x39_Mag_Tracer_F";
+												};
+											};
+											class Item4345
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_mas_nor_556x45_Stanag";
+												};
+											};
+											class Item4346
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Green_Tracer_762x39_AK47_bakelite_M";
+												};
+											};
+											class Item4347
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_60Rnd_TE1_Yellow_Tracer_545x39_AK74M_M";
+												};
+											};
+											class Item4348
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_mas_nor_556x45UW_Stanag";
+												};
+											};
+											class Item4349
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Yellow_Tracer_762x39_bakelite_AK103_M";
+												};
+											};
+											class Item4350
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_556x45_TE1_Tracer_Green_AK19_Green_M";
+												};
+											};
+											class Item4351
+											{
+												class data
+												{
+													singleType="STRING";
+													value="200Rnd_mas_nor_556x45SD_Drum_Mag_F";
+												};
+											};
+											class Item4352
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_100Rnd_TE1_Red_Tracer_556x45_BetaCMag";
+												};
+											};
+											class Item4353
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_100Rnd_TE1_Green_Tracer_556x45_BetaCMag_camo";
+												};
+											};
+											class Item4354
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Green_Tracer_545x39_AK12_Green_M";
+												};
+											};
+											class Item4355
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_100Rnd_TE1_Red_Tracer_556x45_BetaCMag_hex";
+												};
+											};
+											class Item4356
+											{
+												class data
+												{
+													singleType="STRING";
+													value="150Rnd_mas_ukl_556x45SD_Drum_Mag_F";
+												};
+											};
+											class Item4357
+											{
+												class data
+												{
+													singleType="STRING";
+													value="40Rnd_46x30SD_mas_fra_mag";
+												};
+											};
+											class Item4358
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Yellow_Tracer_545x39_AK_M";
+												};
+											};
+											class Item4359
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_556x45_AK19_Green_M";
+												};
+											};
+											class Item4360
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_762x39_Mag_Green_F";
+												};
+											};
+											class Item4361
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_mas_can_9x21sd_Stanag";
+												};
+											};
+											class Item4362
+											{
+												class data
+												{
+													singleType="STRING";
+													value="75rnd_762x39_AK12_Lush_Mag_F";
+												};
+											};
+											class Item4363
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_556x45_AK19_Tan_M";
+												};
+											};
+											class Item4364
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_556x45_TE1_Tracer_Green_AK19_Grey_M";
+												};
+											};
+											class Item4365
+											{
+												class data
+												{
+													singleType="STRING";
+													value="20Rnd_mas_ukl_762x51_Mag";
+												};
+											};
+											class Item4366
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_45Rnd_TE4_LRT4_Green_Tracer_545x39_RPK74M_M";
+												};
+											};
+											class Item4367
+											{
+												class data
+												{
+													singleType="STRING";
+													value="ADFU_200Rnd_556x45";
+												};
+											};
+											class Item4368
+											{
+												class data
+												{
+													singleType="STRING";
+													value="20Rnd_mas_nor_762x51sd_Mag";
+												};
+											};
+											class Item4369
+											{
+												class data
+												{
+													singleType="STRING";
+													value="75rnd_762x39_AK12_Arid_Mag_Tracer_F";
+												};
+											};
+											class Item4370
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_White_Tracer_545x39_AK74M_M";
+												};
+											};
+											class Item4371
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Green_Tracer_545x39_AK12_Tan_M";
+												};
+											};
+											class Item4372
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_IlumFlareGreen_GP25_M";
+												};
+											};
+											class Item4373
+											{
+												class data
+												{
+													singleType="STRING";
+													value="75rnd_762x39_AK12_Mag_F";
+												};
+											};
+											class Item4374
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_mas_nor_556x45sd_Stanag";
+												};
+											};
+											class Item4375
+											{
+												class data
+												{
+													singleType="STRING";
+													value="200Rnd_mas_fra_556x45_Drum_Mag_F";
+												};
+											};
+											class Item4376
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_20Rnd_545x39_AKSU_M";
+												};
+											};
+											class Item4377
+											{
+												class data
+												{
+													singleType="STRING";
+													value="150Rnd_556x45_Drum_Green_Mag_F";
+												};
+											};
+											class Item4378
+											{
+												class data
+												{
+													singleType="STRING";
+													value="75rnd_762x39_AK12_Lush_Mag_Tracer_F";
+												};
+											};
+											class Item4379
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_762x39_AK12_Mag_F";
+												};
+											};
+											class Item4380
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_20Rnd_Subsonic_545x39_AKSU_M";
+												};
+											};
+											class Item4381
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Red_Tracer_545x39_AK_M";
+												};
+											};
+											class Item4382
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_1Rnd_SmokeRed_GP25_M";
+												};
+											};
+											class Item4383
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Red_Tracer_762x39_AK47_bakelite_M";
+												};
+											};
+											class Item4384
+											{
+												class data
+												{
+													singleType="STRING";
+													value="150Rnd_556x45_Drum_Mag_Tracer_F";
+												};
+											};
+											class Item4385
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Red_Tracer_545x39_AK74M_M";
+												};
+											};
+											class Item4386
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_OG7_M";
+												};
+											};
+											class Item4387
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Green_Tracer_545x39_AK74_plum_M";
+												};
+											};
+											class Item4388
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Red_Tracer_762x39_AKM_bakelite_desert_M";
+												};
+											};
+											class Item4389
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_Subsonic_762x39_AK47_bakelite_M";
+												};
+											};
+											class Item4390
+											{
+												class data
+												{
+													singleType="STRING";
+													value="150Rnd_556x45_Drum_Mag_F";
+												};
+											};
+											class Item4391
+											{
+												class data
+												{
+													singleType="STRING";
+													value="200Rnd_mas_ukl_556x45SD_Drum_Mag_F";
+												};
+											};
+											class Item4392
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_545x39_AK12_Grey_M";
+												};
+											};
+											class Item4393
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_556x45_AK19_Grey_M";
+												};
+											};
+											class Item4394
+											{
+												class data
+												{
+													singleType="STRING";
+													value="150Rnd_mas_nor_762x51_Mag";
+												};
+											};
+											class Item4395
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_mas_fra_556x45sd_Stanag";
+												};
+											};
+											class Item4396
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_100Rnd_TE1_Yellow_Tracer_556x45_BetaCMag_wdl";
+												};
+											};
+											class Item4397
+											{
+												class data
+												{
+													singleType="STRING";
+													value="40Rnd_46x30SD_mas_nor_mag";
+												};
+											};
+											class Item4398
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_762x39_AK47_bakelite_M";
+												};
+											};
+											class Item4399
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Red_Tracer_545x39_AK_camo_M";
+												};
+											};
+											class Item4400
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_White_Tracer_545x39_AK74_plum_M";
+												};
+											};
+											class Item4401
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30rnd_762x39_AK12_Arid_Mag_F";
+												};
+											};
+											class Item4402
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_60Rnd_TE1_Red_Tracer_545x39_AK74M_M";
+												};
+											};
+											class Item4403
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Yellow_Tracer_762x39_AK47_M";
+												};
+											};
+											class Item4404
+											{
+												class data
+												{
+													singleType="STRING";
+													value="75rnd_762x39_AK12_Arid_Mag_F";
+												};
+											};
+											class Item4405
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_100Rnd_TE1_Green_Tracer_556x45_BetaCMag_hex";
+												};
+											};
+											class Item4406
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30rnd_762x39_AK12_Lush_Mag_Tracer_F";
+												};
+											};
+											class Item4407
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_762x39_AK15_Desert_M";
+												};
+											};
+											class Item4408
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Green_Tracer_556x45_AK";
+												};
+											};
+											class Item4409
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_100Rnd_TE1_Yellow_Tracer_556x45_BetaCMag_ar15";
+												};
+											};
+											class Item4410
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_100Rnd_TE1_Yellow_Tracer_556x45_BetaCMag_hex";
+												};
+											};
+											class Item4411
+											{
+												class data
+												{
+													singleType="STRING";
+													value="150Rnd_mas_can_762x51_Mag";
+												};
+											};
+											class Item4412
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_100Rnd_TE1_Green_Tracer_556x45_BetaCMag_ar15";
+												};
+											};
+											class Item4413
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_100Rnd_TE1_Yellow_Tracer_556x45_BetaCMag_camo";
+												};
+											};
+											class Item4414
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_100Rnd_556x45_BetaCMag_hex";
+												};
+											};
+											class Item4415
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_IlumFlareRed_GP25_M";
+												};
+											};
+											class Item4416
+											{
+												class data
+												{
+													singleType="STRING";
+													value="150Rnd_mas_fra_762x51_Mag";
+												};
+											};
+											class Item4417
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_100Rnd_TE1_Green_Tracer_556x45_BetaCMag_wdl";
+												};
+											};
+											class Item4418
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_545x39_AK_M";
+												};
+											};
+											class Item4419
+											{
+												class data
+												{
+													singleType="STRING";
+													value="75Rnd_762x39_Mag_Tracer_F";
+												};
+											};
+											class Item4420
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_762x39_AK47_M";
+												};
+											};
+											class Item4421
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_100Rnd_TE1_Red_Tracer_556x45_BetaCMag_camo";
+												};
+											};
+											class Item4422
+											{
+												class data
+												{
+													singleType="STRING";
+													value="75Rnd_762x39_Mag_F";
+												};
+											};
+											class Item4423
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_Subsonic_762x39_AK47_M";
+												};
+											};
+											class Item4424
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_mas_ukl_556x45UW_Stanag";
+												};
+											};
+											class Item4425
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Red_Tracer_762x39_AK47_M";
+												};
+											};
+											class Item4426
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Green_Tracer_545x39_AK_camo_M";
+												};
+											};
+											class Item4427
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_545x39_Mag_Tracer_Green_F";
+												};
+											};
+											class Item4428
+											{
+												class data
+												{
+													singleType="STRING";
+													value="200Rnd_mas_can_556x45_Drum_Mag_F";
+												};
+											};
+											class Item4429
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_PG7VL_M";
+												};
+											};
+											class Item4430
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_60Rnd_545x39_AK74M_M";
+												};
+											};
+											class Item4431
+											{
+												class data
+												{
+													singleType="STRING";
+													value="20Rnd_mas_fra_762x51_Mag";
+												};
+											};
+											class Item4432
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Yellow_Tracer_545x39_AK_camo_M";
+												};
+											};
+											class Item4433
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_100Rnd_556x45_BetaCMag_ar15";
+												};
+											};
+											class Item4434
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_762x39_AK15_OD_M";
+												};
+											};
+											class Item4435
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30rnd_762x39_AK12_Lush_Mag_F";
+												};
+											};
+											class Item4436
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_1Rnd_SmokeGreen_GP25_M";
+												};
+											};
+											class Item4437
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Green_Tracer_545x39_AK12_Grey_M";
+												};
+											};
+											class Item4438
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Green_Tracer_762x39_AKM_bakelite_desert_M";
+												};
+											};
+											class Item4439
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_545x39_Mag_F";
+												};
+											};
+											class Item4440
+											{
+												class data
+												{
+													singleType="STRING";
+													value="75rnd_762x39_AK12_Mag_Tracer_F";
+												};
+											};
+											class Item4441
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_762x39_Mag_Tracer_Green_F";
+												};
+											};
+											class Item4442
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_762x39_AK12_Mag_Tracer_F";
+												};
+											};
+											class Item4443
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_545x39_Mag_Green_F";
+												};
+											};
+											class Item4444
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_762x39_AK47_TK_M";
+												};
+											};
+											class Item4445
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Red_Tracer_762x39_AK103_bakelite_M";
+												};
+											};
+											class Item4446
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Green_Tracer_762x39_AK103_bakelite_M";
+												};
+											};
+											class Item4447
+											{
+												class data
+												{
+													singleType="STRING";
+													value="20Rnd_mas_fra_762x51sd_Mag";
+												};
+											};
+											class Item4448
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_Subsonic_545x39_AK_M";
+												};
+											};
+											class Item4449
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_PG7VR_M";
+												};
+											};
+											class Item4450
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Yellow_Tracer_545x39_AK74M_M";
+												};
+											};
+											class Item4451
+											{
+												class data
+												{
+													singleType="STRING";
+													value="150Rnd_556x45_Drum_Green_Mag_Tracer_F";
+												};
+											};
+											class Item4452
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Green_Tracer_762x39_AK15_M";
+												};
+											};
+											class Item4453
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Green_Tracer_545x39_AK74M_M";
+												};
+											};
+											class Item4454
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_20Rnd_Subsonic_762x39_AMD63_M";
+												};
+											};
+											class Item4455
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_mas_can_556x45UW_Stanag";
+												};
+											};
+											class Item4456
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_mas_ukl_9x21sd_Stanag";
+												};
+											};
+											class Item4457
+											{
+												class data
+												{
+													singleType="STRING";
+													value="200Rnd_mas_can_556x45SD_Drum_Mag_F";
+												};
+											};
+											class Item4458
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Green_Tracer_762x39_AK15_Tan_M";
+												};
+											};
+											class Item4459
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_762x39_Mag_Tracer_F";
+												};
+											};
+											class Item4460
+											{
+												class data
+												{
+													singleType="STRING";
+													value="200Rnd_mas_ukl_556x45_Drum_Mag_F";
+												};
+											};
+											class Item4461
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_PG7V_M";
+												};
+											};
+											class Item4462
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_IlumFlareWhite_GP25_M";
+												};
+											};
+											class Item4463
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Yellow_Tracer_545x39_AK74_plum_M";
+												};
+											};
+											class Item4464
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_60Rnd_TE1_Green_Tracer_545x39_AK74M_M";
+												};
+											};
+											class Item4465
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_mas_ukl_556x45sd_Stanag";
+												};
+											};
+											class Item4466
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_1Rnd_SMOKE_GP25_M";
+												};
+											};
+											class Item4467
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_556x45_AK";
+												};
+											};
+											class Item4468
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_Subsonic_545x39_AK74M_M";
+												};
+											};
+											class Item4469
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Yellow_Tracer_762x39_AKM_bakelite_desert_M";
+												};
+											};
+											class Item4470
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_10Rnd_762x39_SaigaMk03_M";
+												};
+											};
+											class Item4471
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30rnd_762x39_AK12_Arid_Mag_Tracer_F";
+												};
+											};
+											class Item4472
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Red_Tracer_545x39_AK74_plum_M";
+												};
+											};
+											class Item4473
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Green_Tracer_545x39_AK_M";
+												};
+											};
+											class Item4474
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_20Rnd_762x39_AMD63_M";
+												};
+											};
+											class Item4475
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_762x39_AK15_Tan_M";
+												};
+											};
+											class Item4476
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_FlareWhite_GP25_M";
+												};
+											};
+											class Item4477
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Yellow_Tracer_556x45_AK";
+												};
+											};
+											class Item4478
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_White_Tracer_545x39_AK_desert_M";
+												};
+											};
+											class Item4479
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_TBG7V_M";
+												};
+											};
+											class Item4480
+											{
+												class data
+												{
+													singleType="STRING";
+													value="200Rnd_mas_nor_556x45_Drum_Mag_F";
+												};
+											};
+											class Item4481
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Red_Tracer_556x45_AK";
+												};
+											};
+											class Item4482
+											{
+												class data
+												{
+													singleType="STRING";
+													value="40Rnd_46x30SD_mas_ukl_mag";
+												};
+											};
+											class Item4483
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_FlareGreen_GP25_M";
+												};
+											};
+											class Item4484
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_545x39_AK12_Tan_M";
+												};
+											};
+											class Item4485
+											{
+												class data
+												{
+													singleType="STRING";
+													value="ADFU_200Rnd_556x45_Tracer";
+												};
+											};
+											class Item4486
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_FlareYellow_GP25_M";
+												};
+											};
+											class Item4487
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_White_Tracer_545x39_AK_camo_M";
+												};
+											};
+											class Item4488
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Red_Tracer_545x39_AK_desert_M";
+												};
+											};
+											class Item4489
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_545x39_AK12_M";
+												};
+											};
+											class Item4490
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Green_Tracer_762x39_AK47_M";
+												};
+											};
+											class Item4491
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_40Rnd_TE4_LRT4_Green_Tracer_762x39_RPK_M";
+												};
+											};
+											class Item4492
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_75Rnd_TE4_LRT4_Green_Tracer_762x39_RPK_M";
+												};
+											};
+											class Item4493
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_mas_fra_556x45UW_Stanag";
+												};
+											};
+											class Item4494
+											{
+												class data
+												{
+													singleType="STRING";
+													value="150Rnd_mas_ukl_556x45_Drum_Mag_F";
+												};
+											};
+											class Item4495
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_762x39_Mag_F";
+												};
+											};
+											class Item4496
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_White_Tracer_545x39_AK_M";
+												};
+											};
+											class Item4497
+											{
+												class data
+												{
+													singleType="STRING";
+													value="40Rnd_46x30SD_mas_can_mag";
+												};
+											};
+											class Item4498
+											{
+												class data
+												{
+													singleType="STRING";
+													value="ADFU_100Rnd_556x45_Tracer";
+												};
+											};
+											class Item4499
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_545x39_AK74_plum_M";
+												};
+											};
+											class Item4500
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_60Rnd_TE1_White_Tracer_545x39_AK74M_M";
+												};
+											};
+											class Item4501
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_762x39_AK103_bakelite_M";
+												};
+											};
+											class Item4502
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_Subsonic_762x39_AKM_bakelite_desert_M";
+												};
+											};
+											class Item4503
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Yellow_Tracer_545x39_AK_desert_M";
+												};
+											};
+											class Item4504
+											{
+												class data
+												{
+													singleType="STRING";
+													value="150Rnd_556x45_Drum_Sand_Mag_F";
+												};
+											};
+											class Item4505
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_1Rnd_SmokeYellow_GP25_M";
+												};
+											};
+											class Item4506
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_545x39_AK12_Green_M";
+												};
+											};
+											class Item4507
+											{
+												class data
+												{
+													singleType="STRING";
+													value="150Rnd_mas_ukl_762x51_Mag";
+												};
+											};
+											class Item4508
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_100Rnd_TE1_Red_Tracer_556x45_BetaCMag_wdl";
+												};
+											};
+											class Item4509
+											{
+												class data
+												{
+													singleType="STRING";
+													value="30Rnd_mas_can_556x45_Stanag";
+												};
+											};
+											class Item4510
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Yellow_Tracer_762x39_bakelite_AK47_M";
+												};
+											};
+											class Item4511
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_1Rnd_HE_GP25_M";
+												};
+											};
+											class Item4512
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_545x39_AK74M_desert_M";
+												};
+											};
+											class Item4513
+											{
+												class data
+												{
+													singleType="STRING";
+													value="CUP_30Rnd_TE1_Green_Tracer_545x39_AK12_M";
 												};
 											};
 										};
