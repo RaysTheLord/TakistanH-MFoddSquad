@@ -5,14 +5,14 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=521;
+	toggles=513;
 	mods[]=
 	{
 		"3denEnhanced"
 	};
 	class ItemIDProvider
 	{
-		nextID=7931;
+		nextID=7933;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1630;
+		nextID=1712;
 	};
 	class Camera
 	{
-		pos[]={9960.8105,189.6839,10035.84};
-		dir[]={-0.47921211,-0.26200294,-0.83768159};
-		up[]={-0.13009974,0.96506709,-0.22741948};
-		aside[]={-0.86800349,7.4505806e-009,0.49655837};
+		pos[]={10015.351,380.61734,10003.069};
+		dir[]={-0.0077710827,-0.99994999,0.0062935087};
+		up[]={-0.7770772,0.01000176,0.62932575};
+		aside[]={0.62935722,-4.6566129e-010,0.77711606};
 	};
 };
 binarizationWanted=0;
@@ -14780,7 +14780,7 @@ class Mission
 			name="COP";
 			class Entities
 			{
-				items=73;
+				items=75;
 				class Item0
 				{
 					dataType="Object";
@@ -80326,9 +80326,46 @@ class Mission
 					id=7922;
 					atlOffset=-0.33239746;
 				};
+				class Item73
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9955.2168,187.25409,10059.638};
+						angles[]={0.065506957,3.9234128,6.2639894};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="this addAction " \n "[ " \n " ""Open Arsenal"", " \n " { " \n "  params [""_target"", ""_caller"", ""_actionId"", ""_arguments""]; " \n "        [general_arsenal, _caller, false] call ace_arsenal_fnc_openBox; " \n " }, " \n " nil, " \n " 1.5, " \n " true, " \n " true, " \n " """", " \n " ""!(_this getVariable ['interpreter', false])"", " \n " 5, " \n " false, " \n " """", " \n " """" " \n "]; " \n " " \n "this addAction " \n "[ " \n " ""Open Arsenal"", " \n " { " \n "  params [""_target"", ""_caller"", ""_actionId"", ""_arguments""]; " \n "        [terp_arsenal, _caller, false] call ace_arsenal_fnc_openBox; " \n " }, " \n " nil, " \n " 1.5, " \n " true, " \n " true, " \n " """", " \n " ""_this getVariable ['interpreter', false]"", " \n " 5, " \n " false, " \n " """", " \n " """" " \n "];";
+						dynamicSimulation=1;
+					};
+					id=7931;
+					type="CargoNet_01_box_F";
+					atlOffset=-3.0517578e-005;
+				};
+				class Item74
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={9964.7842,186.35228,10069.881};
+						angles[]={0.047963165,3.9234128,6.2703872};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						init="this addAction " \n "[ " \n " ""Open Arsenal"", " \n " { " \n "  params [""_target"", ""_caller"", ""_actionId"", ""_arguments""]; " \n "        [general_arsenal, _caller, false] call ace_arsenal_fnc_openBox; " \n " }, " \n " nil, " \n " 1.5, " \n " true, " \n " true, " \n " """", " \n " ""!(_this getVariable ['interpreter', false])"", " \n " 5, " \n " false, " \n " """", " \n " """" " \n "]; " \n " " \n "this addAction " \n "[ " \n " ""Open Arsenal"", " \n " { " \n "  params [""_target"", ""_caller"", ""_actionId"", ""_arguments""]; " \n "        [terp_arsenal, _caller, false] call ace_arsenal_fnc_openBox; " \n " }, " \n " nil, " \n " 1.5, " \n " true, " \n " true, " \n " """", " \n " ""_this getVariable ['interpreter', false]"", " \n " 5, " \n " false, " \n " """", " \n " """" " \n "];";
+						dynamicSimulation=1;
+					};
+					id=7932;
+					type="CargoNet_01_box_F";
+				};
 			};
 			id=1119;
-			atlOffset=-0.086227417;
+			atlOffset=-0.2013092;
 		};
 		class Item10
 		{
@@ -103025,14 +103062,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="unitInsignia";
-									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="ADFU_insignia_sasr_patch";
+											singleType="BOOL";
+											value=1;
 										};
 									};
 								};
@@ -103064,14 +103101,14 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									property="unitInsignia";
+									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 									class Value
 									{
 										class data
 										{
-											singleType="BOOL";
-											value=1;
+											singleType="STRING";
+											value="ADFU_insignia_sasr_patch";
 										};
 									};
 								};
@@ -108803,14 +108840,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									property="unitInsignia";
+									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 									class Value
 									{
 										class data
 										{
-											singleType="BOOL";
-											value=1;
+											singleType="STRING";
+											value="USP_PATCH_NATO_ISAF_ROUNDEL_TAN";
 										};
 									};
 								};
@@ -108842,14 +108879,14 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="unitInsignia";
-									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="USP_PATCH_NATO_ISAF_ROUNDEL_TAN";
+											singleType="BOOL";
+											value=1;
 										};
 									};
 								};
@@ -109006,14 +109043,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									property="unitInsignia";
+									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 									class Value
 									{
 										class data
 										{
-											singleType="BOOL";
-											value=1;
+											singleType="STRING";
+											value="USP_PATCH_NATO_ISAF_ROUNDEL_TAN";
 										};
 									};
 								};
@@ -109045,14 +109082,14 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="unitInsignia";
-									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="USP_PATCH_NATO_ISAF_ROUNDEL_TAN";
+											singleType="BOOL";
+											value=1;
 										};
 									};
 								};
@@ -113362,19 +113399,6 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute5
-								{
 									property="unitInsignia";
 									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 									class Value
@@ -113383,6 +113407,19 @@ class Mission
 										{
 											singleType="STRING";
 											value="CUP_insignia_spc_airborne_ranger";
+										};
+									};
+								};
+								class Attribute5
+								{
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
 										};
 									};
 								};
@@ -113899,14 +113936,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="unitInsignia";
-									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="Insignia_FODDSQUAD3";
+											singleType="BOOL";
+											value=1;
 										};
 									};
 								};
@@ -113938,14 +113975,14 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									property="unitInsignia";
+									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 									class Value
 									{
 										class data
 										{
-											singleType="BOOL";
-											value=1;
+											singleType="STRING";
+											value="Insignia_FODDSQUAD3";
 										};
 									};
 								};
@@ -114092,19 +114129,6 @@ class Mission
 								};
 								class Attribute4
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								class Attribute5
-								{
 									property="unitInsignia";
 									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 									class Value
@@ -114113,6 +114137,19 @@ class Mission
 										{
 											singleType="STRING";
 											value="ADFU_insignia_2_cdo_patch";
+										};
+									};
+								};
+								class Attribute5
+								{
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
 										};
 									};
 								};
