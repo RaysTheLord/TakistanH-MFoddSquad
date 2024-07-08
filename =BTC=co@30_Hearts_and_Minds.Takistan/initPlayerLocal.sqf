@@ -1,3 +1,7 @@
+//Add FOB map
+player createDiarySubject ["copMap","COP Map"];
+player createDiaryRecord ["copMap", "<img image='campmap_50.jpg' width='400' height='200'/>"];
+
 //Chat command init
 _access_allowed = ["UselessFodder"];
 if ((name player) in _access_allowed || (call BIS_fnc_admin) > 0) then {

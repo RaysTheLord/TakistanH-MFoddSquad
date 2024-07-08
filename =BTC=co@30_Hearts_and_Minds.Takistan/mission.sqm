@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=7955;
+		nextID=7958;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1794;
+		nextID=1999;
 	};
 	class Camera
 	{
-		pos[]={9962.3379,187.77055,10065.721};
-		dir[]={-0.8325336,-0.19638942,0.51809913};
-		up[]={-0.16679971,0.98051012,0.10380132};
-		aside[]={0.52838051,9.9016324e-007,0.84906507};
+		pos[]={10034.322,191.55791,10047.475};
+		dir[]={-0.43580744,-0.30267701,0.8476193};
+		up[]={-0.13840084,0.95309317,0.26918131};
+		aside[]={0.88933516,0,0.45725584};
 	};
 };
 binarizationWanted=0;
@@ -12434,6 +12434,18 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -12442,18 +12454,6 @@ class CustomAttributes
 				{
 					singleType="SCALAR";
 					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="ARRAY";
 				};
 			};
 		};
@@ -12489,7 +12489,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=14;
+									items=15;
 									class Item0
 									{
 										class data
@@ -12602,6 +12602,14 @@ class CustomAttributes
 											value="lambs_eventhandlers_explosioneventhandlerenabled";
 										};
 									};
+									class Item14
+									{
+										class data
+										{
+											singleType="STRING";
+											value="tsp_cba_breach_ammo";
+										};
+									};
 								};
 							};
 						};
@@ -12612,7 +12620,7 @@ class CustomAttributes
 								singleType="ARRAY";
 								class value
 								{
-									items=14;
+									items=15;
 									class Item0
 									{
 										class data
@@ -13002,6 +13010,33 @@ class CustomAttributes
 											};
 										};
 									};
+									class Item14
+									{
+										class data
+										{
+											singleType="ARRAY";
+											class value
+											{
+												items=2;
+												class Item0
+												{
+													class data
+													{
+														singleType="STRING";
+														value="[""7Rnd_mas_can_12Gauge_Slug"", ""CUP_8Rnd_12Gauge_Slug"", ""7Rnd_mas_fra_12Gauge_Slug"", ""CUP_2Rnd_12Gauge_Slug"", ""7Rnd_mas_ukl_12Gauge_Slug"", ""CUP_1Rnd_12Gauge_Slug"", ""2Rnd_12Gauge_Slug"", ""CUP_6Rnd_12Gauge_Slug"", ""8Rnd_mas_nor_12Gauge_Slug"", ""B_12Gauge_Slug_NoCartridge"", ""rhs_ammo_12g_slug"", ""rhs_ammo_12g_00buckshot"", ""CUP_6Rnd_12Guage_Slug"", ""CUP_2Rnd_12Guage_Slug"", ""CUP_1Rnd_12Guage_Slug""]";
+													};
+												};
+												class Item1
+												{
+													class data
+													{
+														singleType="SCALAR";
+														value=1;
+													};
+												};
+											};
+										};
+									};
 								};
 							};
 						};
@@ -13062,7 +13097,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=33;
+		items=34;
 		class Item0
 		{
 			dataType="Marker";
@@ -13361,7 +13396,7 @@ class Mission
 								class data
 								{
 									singleType="STRING";
-									value="[[[[""CUP_arifle_M4A1_black"",""CUP_launch_M136"",""FirstAidKit"",""Medikit""],[2,1,10,1]],[[""CUP_30Rnd_556x45_Stanag"",""CUP_M136_M"",""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[20,2,2,2,2]],[[""ToolKit""],[1]],[[""CUP_B_USPack_Coyote""],[4]]],false]";
+									value="[[[[""CUP_arifle_M4A1_black"",""CUP_launch_M136"",""FirstAidKit"",""Medikit""],[2,1,10,1]],[[""CUP_30Rnd_556x45_Stanag"",""CUP_M136_M"",""SmokeShell"",""SmokeShellOrange"",""Chemlight_red""],[20,2,2,2,2]],[[""ToolKit"",""ACE_bodyBag""],[1,10]],[[""CUP_B_USPack_Coyote""],[4]]],false]";
 								};
 							};
 						};
@@ -27312,7 +27347,7 @@ class Mission
 							};
 							id=2281;
 							type="Land_Bandage_F";
-							atlOffset=1.0231781;
+							atlOffset=1.0012665;
 						};
 						class Item49
 						{
@@ -27331,7 +27366,7 @@ class Mission
 							};
 							id=2282;
 							type="Land_Bandage_F";
-							atlOffset=1.0170135;
+							atlOffset=0.99510193;
 						};
 						class Item50
 						{
@@ -27349,7 +27384,7 @@ class Mission
 							};
 							id=2283;
 							type="Land_Bandage_F";
-							atlOffset=1.0037384;
+							atlOffset=0.98182678;
 						};
 						class Item51
 						{
@@ -30523,7 +30558,6 @@ class Mission
 				{
 					dataType="Layer";
 					name="Helipads";
-					state=1;
 					class Entities
 					{
 						items=68;
@@ -31681,7 +31715,7 @@ class Mission
 							flags=5;
 							class Attributes
 							{
-								init="this setVariable [""calledPickup"", false, true]; " \n "this addAction [""Call Pickup (Bodies)"", {[] execVM 'call_body_evac.sqf'}];   " \n "this addAction [""Call Pickup (Prisoners)"", {[] execVM 'call_prisoner_evac.sqf'}]; ";
+								init="this setVariable [""calledPickup"", false, true];  " \n "this addAction [""Call Pickup (Bodies)"", {'call_body_evac.sqf' remoteExec ['execVM',2];}];    " \n "this addAction [""Call Pickup (Prisoners)"", {'call_prisoner_evac.sqf' remoteExec ['execVM',2]; }]; ";
 								name="helicall";
 								dynamicSimulation=1;
 							};
@@ -42439,7 +42473,7 @@ class Mission
 														singleType="ARRAY";
 														class value
 														{
-															items=4514;
+															items=4523;
 															class Item0
 															{
 																class data
@@ -78552,6 +78586,78 @@ class Mission
 																	value="CUP_30Rnd_TE1_Green_Tracer_545x39_AK12_M";
 																};
 															};
+															class Item4514
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="Laserbatteries";
+																};
+															};
+															class Item4515
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="srifle_DMR_02_F";
+																};
+															};
+															class Item4516
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="srifle_DMR_02_sniper_F";
+																};
+															};
+															class Item4517
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="ACE_10Rnd_762x67_Berger_Hybrid_OTM_Mag";
+																};
+															};
+															class Item4518
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="10Rnd_338_Mag";
+																};
+															};
+															class Item4519
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="ACE_10Rnd_338_API526_Mag";
+																};
+															};
+															class Item4520
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="ACE_10Rnd_762x67_Mk248_Mod_1_Mag";
+																};
+															};
+															class Item4521
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="ACE_10Rnd_762x67_Mk248_Mod_0_Mag";
+																};
+															};
+															class Item4522
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="ACE_10Rnd_338_300gr_HPBT_Mag";
+																};
+															};
 														};
 													};
 												};
@@ -80439,7 +80545,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10104.692,184.87976,10048.521};
-						angles[]={0,3.8895319,-0};
+						angles[]={0,3.8895319,0};
 					};
 					side="Empty";
 					flags=1;
@@ -80493,7 +80599,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={9963.8643,189.55771,10042.894};
-						angles[]={0,2.3542511,-0};
+						angles[]={0,2.3542511,0};
 					};
 					side="Empty";
 					flags=1;
@@ -80562,7 +80668,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10005.697,190.03279,9952.3652};
-						angles[]={0,3.8895319,-0};
+						angles[]={0,3.8895319,0};
 					};
 					side="Empty";
 					flags=1;
@@ -80631,7 +80737,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10007.836,189.58498,10008.222};
-						angles[]={0,3.8895319,-0};
+						angles[]={0,3.8895319,0};
 					};
 					side="Empty";
 					flags=1;
@@ -80701,7 +80807,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={9983.9063,190.07396,9979.8447};
-						angles[]={0,3.8895319,-0};
+						angles[]={0,3.8895319,0};
 					};
 					side="Empty";
 					flags=1;
@@ -80736,7 +80842,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10047.021,187.05247,10018.078};
-						angles[]={0,5.4309564,-0};
+						angles[]={0,5.4309564,0};
 					};
 					side="Empty";
 					flags=5;
@@ -80770,7 +80876,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10047.02,188.37653,10018.084};
-						angles[]={0,5.4375148,-0};
+						angles[]={0,5.4375148,0};
 					};
 					side="Empty";
 					flags=1;
@@ -80805,7 +80911,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10056.813,185.57721,10053.663};
-						angles[]={0,2.3395157,-0};
+						angles[]={0,2.3395157,0};
 					};
 					side="Empty";
 					flags=5;
@@ -80815,6 +80921,7 @@ class Mission
 					};
 					id=7953;
 					type="FODDSQUAD_Signs1";
+					atlOffset=3.0517578e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -80839,7 +80946,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10056.814,186.90102,10053.657};
-						angles[]={0,2.3460741,-0};
+						angles[]={0,2.3460741,0};
 					};
 					side="Empty";
 					flags=1;
@@ -80870,7 +80977,7 @@ class Mission
 				};
 			};
 			id=1119;
-			atlOffset=0.94743347;
+			atlOffset=0.94270325;
 		};
 		class Item10
 		{
@@ -100133,7 +100240,7 @@ class Mission
 			name="Character Identities (Normal)";
 			class Entities
 			{
-				items=23;
+				items=24;
 				class Item0
 				{
 					dataType="Group";
@@ -103567,14 +103674,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
 											singleType="BOOL";
-											value=1;
+											value=0;
 										};
 									};
 								};
@@ -103606,6 +103713,19 @@ class Mission
 								};
 								class Attribute4
 								{
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute5
+								{
 									property="unitInsignia";
 									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 									class Value
@@ -103614,19 +103734,6 @@ class Mission
 										{
 											singleType="STRING";
 											value="ADFU_insignia_sasr_patch";
-										};
-									};
-								};
-								class Attribute5
-								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
 										};
 									};
 								};
@@ -106158,9 +106265,126 @@ class Mission
 					};
 					id=3664;
 				};
+				class Item23
+				{
+					dataType="Group";
+					side="West";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={9902.0986,188.42107,10040.179};
+								angles[]={0,3.4427493,0};
+							};
+							side="West";
+							flags=7;
+							class Attributes
+							{
+								disableSimulation=1;
+								ignoreByDynSimulGrid=1;
+								class Inventory
+								{
+									class uniform
+									{
+										typeName="CUP_U_B_USArmy_PilotOverall";
+										isBackpack=0;
+										class ItemCargo
+										{
+											items=1;
+											class Item0
+											{
+												name="FirstAidKit";
+												count=1;
+											};
+										};
+									};
+								};
+							};
+							id=7957;
+							type="CUP_B_US_Pilot_Light";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="allowDamage";
+									expression="_this allowdamage _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								class Attribute1
+								{
+									property="speaker";
+									expression="_this setspeaker _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="Male09ENG";
+										};
+									};
+								};
+								class Attribute2
+								{
+									property="pitch";
+									expression="_this setpitch _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="SCALAR";
+											value=0.99000001;
+										};
+									};
+								};
+								class Attribute3
+								{
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute4
+								{
+									property="enableStamina";
+									expression="_this enablestamina _value;";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=5;
+							};
+						};
+					};
+					class Attributes
+					{
+					};
+					id=7956;
+				};
 			};
 			id=3324;
-			atlOffset=-0.019454956;
+			atlOffset=-0.0046844482;
 		};
 		class Item19
 		{
@@ -108550,7 +108774,7 @@ class Mission
 			{
 				name="handle_characters";
 				condition="true";
-				onActivation="0 spawn { " \n "    sleep 2; " \n "    _random_ambient = (getMissionLayerEntities ""COP Ambient Random"") select 2;  " \n "    _random_units = [];  " \n " " \n "    {  " \n "        _random_units append (units _x);  " \n "    } forEach _random_ambient;  " \n " " \n " " \n "    _characters_n = (getMissionLayerEntities ""Character Identities (Normal)"") select 2;  " \n "    _characters_m = (getMissionLayerEntities ""Character Identities (Medic)"") select 2;  " \n "    _characters_o = (getMissionLayerEntities ""Character Identities (Officer)"") select 2;  " \n " " \n "    _garbage_ids = [];  " \n " " \n " " \n "    _valid_identities_n = [];  " \n "    _valid_identities_m = [];  " \n "    _valid_identities_o = [];  " \n " " \n "    {  " \n "        _valid_identities_n append (units _x);  " \n "        _garbage_ids append (units _x);  " \n "    } forEach _characters_n;  " \n " " \n "    {  " \n "        _valid_identities_m append (units _x);  " \n "        _garbage_ids append (units _x);  " \n "    } forEach _characters_m;  " \n " " \n "    {  " \n "        _valid_identities_o append (units _x);  " \n "        _garbage_ids append (units _x);  " \n "    } forEach _characters_o;  " \n " " \n "    {  " \n "        _idc = objNull;  " \n "        if ((rankId _x) > 2) then {  " \n "            _idc = selectRandom _valid_identities_o;  " \n "            _valid_identities_o deleteAt (_valid_identities_o find _idc);  " \n "        } else {  " \n "            if (_x getUnitTrait ""Medic"") then {  " \n "                _idc = selectRandom _valid_identities_m;  " \n "                _valid_identities_m deleteAt (_valid_identities_m find _idc);  " \n "            } else {  " \n "                _idc = selectRandom _valid_identities_n;  " \n "                _valid_identities_n deleteAt (_valid_identities_n find _idc);  " \n "            };  " \n "        };  " \n " " \n "        [_x, getUnitLoadout _idc] remoteExec [""setUnitLoadout"", 0, _x];  " \n "        [_x, name _idc] remoteExec [""setName"", 0, _x];  " \n "        [_x, face _idc] remoteExec [""setFace"", 0, _x];  " \n "        [_x, rank _idc] remoteExec [""setRank"", 0, _x];  " \n "        [_x, speaker _idc] remoteExec [""setSpeaker"", 0, _x];  " \n " " \n "        [_x, [_idc] call BIS_fnc_getUnitInsignia] spawn {  " \n "            [_this select 0, ""Curator""] call BIS_fnc_setUnitInsignia;  " \n "            sleep 1;  " \n "            _this call BIS_fnc_setUnitInsignia;  " \n "        };  " \n "    } forEach _random_units;  " \n " " \n "    _random_guards = (getMissionLayerEntities ""COP Ambient Persistent"") select 2;  " \n "    _guard_units = [];  " \n " " \n " " \n "    {  " \n "        _guard_units append (units _x);  " \n "    } forEach _random_guards;  " \n " " \n "    _characters_g = (getMissionLayerEntities ""Character Identities (Guard)"") select 2;  " \n "    _valid_identities_g = [];  " \n " " \n "    {  " \n "        _valid_identities_g append (units _x);  " \n "        _garbage_ids append (units _x);  " \n "    } forEach _characters_g;  " \n " " \n "    {  " \n "        _idc = selectRandom _valid_identities_g;  " \n "        _valid_identities_g deleteAt (_valid_identities_g find _idc);  " \n " " \n "        [_x, getUnitLoadout _idc] remoteExec [""setUnitLoadout"", 0, _x];  " \n "        [_x, name _idc] remoteExec [""setName"", 0, _x];  " \n "        [_x, face _idc] remoteExec [""setFace"", 0, _x];  " \n "        [_x, rank _idc] remoteExec [""setRank"", 0, _x];  " \n "        [_x, speaker _idc] remoteExec [""setSpeaker"", 0, _x];  " \n " " \n "        [_x, [_idc] call BIS_fnc_getUnitInsignia] spawn {  " \n "            [_this select 0, ""Curator""] call BIS_fnc_setUnitInsignia;  " \n "            sleep 1;  " \n "            _this call BIS_fnc_setUnitInsignia;  " \n "        };  " \n "    } forEach _guard_units;  " \n " " \n " " \n "    _random_toc = (getMissionLayerEntities ""COP Ambient TOC"") select 2;  " \n "    _toc_units = [];  " \n " " \n "    {  " \n "        _toc_units append (units _x);  " \n "    } forEach _random_toc;  " \n " " \n "    _characters_t = (getMissionLayerEntities ""Character Identities (TOC)"") select 2;  " \n "    _valid_identities_t = [];  " \n " " \n "    {  " \n "        _valid_identities_t append (units _x);  " \n "        _garbage_ids append (units _x);  " \n "    } forEach _characters_t;  " \n " " \n "    {  " \n "        _idc = selectRandom _valid_identities_t;  " \n "        _valid_identities_t deleteAt (_valid_identities_t find _idc);  " \n " " \n "        [_x, getUnitLoadout _idc] remoteExec [""setUnitLoadout"", 0, _x];  " \n "        [_x, name _idc] remoteExec [""setName"", 0, _x];  " \n "        [_x, face _idc] remoteExec [""setFace"", 0, _x];  " \n "        [_x, rank _idc] remoteExec [""setRank"", 0, _x];  " \n "        [_x, speaker _idc] remoteExec [""setSpeaker"", 0, _x];  " \n " " \n "        [_x, [_idc] call BIS_fnc_getUnitInsignia] spawn {  " \n "            [_this select 0, ""Curator""] call BIS_fnc_setUnitInsignia;  " \n "            sleep 1;  " \n "            _this call BIS_fnc_setUnitInsignia;  " \n "        };  " \n "    } forEach _toc_units;  " \n " " \n " " \n "    _garbage_ids spawn {  " \n "        sleep 10;  " \n "        {deleteVehicle _x} forEach _this;  " \n "    }; " \n "} " \n "";
+				onActivation="0 spawn {  " \n "    sleep 2;  " \n "    _random_ambient = (getMissionLayerEntities ""COP Ambient Random"") select 2;   " \n "    _random_units = [];   " \n "  " \n "    {   " \n "        _random_units append (units _x);   " \n "    } forEach _random_ambient;   " \n "  " \n "  " \n "    _characters_n = (getMissionLayerEntities ""Character Identities (Normal)"") select 2;   " \n "    _characters_m = (getMissionLayerEntities ""Character Identities (Medic)"") select 2;   " \n "    _characters_o = (getMissionLayerEntities ""Character Identities (Officer)"") select 2;   " \n "  " \n "    _garbage_ids = [];   " \n "  " \n "  " \n "    _valid_identities_n = [];   " \n "    _valid_identities_m = [];   " \n "    _valid_identities_o = [];   " \n "  " \n "    {   " \n "        _valid_identities_n append (units _x);   " \n "        _garbage_ids append (units _x);   " \n "    } forEach _characters_n;   " \n "  " \n "    {   " \n "        _valid_identities_m append (units _x);   " \n "        _garbage_ids append (units _x);   " \n "    } forEach _characters_m;   " \n "  " \n "    {   " \n "        _valid_identities_o append (units _x);   " \n "        _garbage_ids append (units _x);   " \n "    } forEach _characters_o;   " \n "  " \n "    {   " \n "        _idc = objNull;   " \n "        if ((rankId _x) > 2) then {   " \n "            if (count _valid_identities_o <= 0) then { " \n "                continue; " \n "            }; " \n "            _idc = selectRandom _valid_identities_o;  " \n "            _valid_identities_o deleteAt (_valid_identities_o find _idc);   " \n "        } else {   " \n "            if (_x getUnitTrait ""Medic"") then {   " \n "                if (count _valid_identities_m <= 0) then { " \n "                    continue; " \n "                }; " \n "                _idc = selectRandom _valid_identities_m;   " \n "                _valid_identities_m deleteAt (_valid_identities_m find _idc);   " \n "            } else {   " \n "                if (count _valid_identities_n <= 0) then { " \n "                    continue; " \n "                }; " \n "                _idc = selectRandom _valid_identities_n;   " \n "                _valid_identities_n deleteAt (_valid_identities_n find _idc);   " \n "            };   " \n "        };   " \n "         " \n "        [_x, getUnitLoadout _idc] remoteExec [""setUnitLoadout"", 0, _x];   " \n "        [_x, name _idc] remoteExec [""setName"", 0, _x];   " \n "        [_x, face _idc] remoteExec [""setFace"", 0, _x];   " \n "        [_x, rank _idc] remoteExec [""setRank"", 0, _x];   " \n "        [_x, speaker _idc] remoteExec [""setSpeaker"", 0, _x];   " \n "  " \n "        [_x, [_idc] call BIS_fnc_getUnitInsignia] spawn {   " \n "            [_this select 0, ""Curator""] call BIS_fnc_setUnitInsignia;   " \n "            sleep 1;   " \n "            _this call BIS_fnc_setUnitInsignia;   " \n "        };   " \n "    } forEach _random_units;   " \n "  " \n "    _random_guards = (getMissionLayerEntities ""COP Ambient Persistent"") select 2;   " \n "    _guard_units = [];   " \n "  " \n "  " \n "    {   " \n "        _guard_units append (units _x);   " \n "    } forEach _random_guards;   " \n "  " \n "    _characters_g = (getMissionLayerEntities ""Character Identities (Guard)"") select 2;   " \n "    _valid_identities_g = [];   " \n "  " \n "    {   " \n "        _valid_identities_g append (units _x);   " \n "        _garbage_ids append (units _x);   " \n "    } forEach _characters_g;   " \n "  " \n "    {   " \n "        _idg = selectRandom _valid_identities_g;   " \n "        _valid_identities_g deleteAt (_valid_identities_g find _idg);   " \n "  " \n "        [_x, getUnitLoadout _idg] remoteExec [""setUnitLoadout"", 0, _x];   " \n "        [_x, name _idg] remoteExec [""setName"", 0, _x];   " \n "        [_x, face _idg] remoteExec [""setFace"", 0, _x];   " \n "        [_x, rank _idg] remoteExec [""setRank"", 0, _x];   " \n "        [_x, speaker _idg] remoteExec [""setSpeaker"", 0, _x];   " \n "  " \n "        [_x, [_idg] call BIS_fnc_getUnitInsignia] spawn {   " \n "            [_this select 0, ""Curator""] call BIS_fnc_setUnitInsignia;   " \n "            sleep 1;   " \n "            _this call BIS_fnc_setUnitInsignia;   " \n "        };   " \n "    } forEach _guard_units;   " \n "  " \n "  " \n "    _random_toc = (getMissionLayerEntities ""COP Ambient TOC"") select 2;   " \n "    _toc_units = [];   " \n "  " \n "    {   " \n "        _toc_units append (units _x);   " \n "    } forEach _random_toc;   " \n "  " \n "    _characters_t = (getMissionLayerEntities ""Character Identities (TOC)"") select 2;   " \n "    _valid_identities_t = [];   " \n "  " \n "    {   " \n "        _valid_identities_t append (units _x);   " \n "        _garbage_ids append (units _x);   " \n "    } forEach _characters_t;   " \n "  " \n "    {   " \n "        _idt = selectRandom _valid_identities_t;   " \n "        _valid_identities_t deleteAt (_valid_identities_t find _idt);   " \n "  " \n "        [_x, getUnitLoadout _idt] remoteExec [""setUnitLoadout"", 0, _x];   " \n "        [_x, name _idt] remoteExec [""setName"", 0, _x];   " \n "        [_x, face _idt] remoteExec [""setFace"", 0, _x];   " \n "        [_x, rank _idt] remoteExec [""setRank"", 0, _x];   " \n "        [_x, speaker _idt] remoteExec [""setSpeaker"", 0, _x];   " \n "  " \n "        [_x, [_idt] call BIS_fnc_getUnitInsignia] spawn {   " \n "            [_this select 0, ""Curator""] call BIS_fnc_setUnitInsignia;   " \n "            sleep 1;   " \n "            _this call BIS_fnc_setUnitInsignia;   " \n "        };   " \n "    } forEach _toc_units;   " \n "  " \n "  " \n "    _garbage_ids spawn {   " \n "        sleep 10;   " \n "        {deleteVehicle _x} forEach _this;   " \n "    };  " \n "};";
 				sizeA=0;
 				sizeB=0;
 				isServerOnly=1;
@@ -109345,14 +109569,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="unitInsignia";
-									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="USP_PATCH_NATO_ISAF_ROUNDEL_TAN";
+											singleType="BOOL";
+											value=0;
 										};
 									};
 								};
@@ -109384,6 +109608,19 @@ class Mission
 								};
 								class Attribute4
 								{
+									property="unitInsignia";
+									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="USP_PATCH_NATO_ISAF_ROUNDEL_TAN";
+										};
+									};
+								};
+								class Attribute5
+								{
 									property="hideObject";
 									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
 									class Value
@@ -109392,19 +109629,6 @@ class Mission
 										{
 											singleType="BOOL";
 											value=1;
-										};
-									};
-								};
-								class Attribute5
-								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
 										};
 									};
 								};
@@ -109548,14 +109772,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="unitInsignia";
-									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="USP_PATCH_NATO_ISAF_ROUNDEL_TAN";
+											singleType="BOOL";
+											value=0;
 										};
 									};
 								};
@@ -109587,6 +109811,19 @@ class Mission
 								};
 								class Attribute4
 								{
+									property="unitInsignia";
+									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="USP_PATCH_NATO_ISAF_ROUNDEL_TAN";
+										};
+									};
+								};
+								class Attribute5
+								{
 									property="hideObject";
 									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
 									class Value
@@ -109595,19 +109832,6 @@ class Mission
 										{
 											singleType="BOOL";
 											value=1;
-										};
-									};
-								};
-								class Attribute5
-								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
 										};
 									};
 								};
@@ -113865,14 +114089,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
 									class Value
 									{
 										class data
 										{
 											singleType="BOOL";
-											value=0;
+											value=1;
 										};
 									};
 								};
@@ -113917,14 +114141,14 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
 											singleType="BOOL";
-											value=1;
+											value=0;
 										};
 									};
 								};
@@ -114441,14 +114665,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
 											singleType="BOOL";
-											value=1;
+											value=0;
 										};
 									};
 								};
@@ -114480,6 +114704,19 @@ class Mission
 								};
 								class Attribute4
 								{
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute5
+								{
 									property="unitInsignia";
 									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 									class Value
@@ -114488,19 +114725,6 @@ class Mission
 										{
 											singleType="STRING";
 											value="Insignia_FODDSQUAD3";
-										};
-									};
-								};
-								class Attribute5
-								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
 										};
 									};
 								};
@@ -114595,14 +114819,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
 									class Value
 									{
 										class data
 										{
 											singleType="BOOL";
-											value=0;
+											value=1;
 										};
 									};
 								};
@@ -114647,14 +114871,14 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
 											singleType="BOOL";
-											value=1;
+											value=0;
 										};
 									};
 								};
@@ -121007,7 +121231,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10073.003,184.65749,10043.73};
-				angles[]={0,5.4240046,-0};
+				angles[]={0,5.4240046,0};
 			};
 			side="Empty";
 			flags=5;
@@ -121017,6 +121241,85 @@ class Mission
 			};
 			id=7935;
 			type="Land_CncBarrierMedium_F";
+		};
+		class Item33
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9997.6748,187.70401,10008.522};
+			};
+			id=7955;
+			type="ModuleRespawnPosition_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleRespawnPosition_F_Marker";
+					expression="_this setVariable ['Marker',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleRespawnPosition_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Med Facility";
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleRespawnPosition_F_Side";
+					expression="_this setVariable ['Side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="3";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleRespawnPosition_F_ShowNotification";
+					expression="_this setVariable ['ShowNotification',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="1";
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="ModuleRespawnPosition_F_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="0";
+						};
+					};
+				};
+				nAttributes=5;
+			};
 		};
 	};
 };

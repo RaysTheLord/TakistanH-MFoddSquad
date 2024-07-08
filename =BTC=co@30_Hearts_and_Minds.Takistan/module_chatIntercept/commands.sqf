@@ -124,8 +124,6 @@ pvpfw_chatIntercept_allCommands = [
                 };
                 systemChat format["Wolverine mode activated for %1 seconds.", _wolv_time];
             };
-
-
 		}
 	]
 ];
