@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2122;
+		nextID=2245;
 	};
 	class Camera
 	{
-		pos[]={9992.8594,208.14139,9964.0332};
-		dir[]={-0.68749183,-0.51636225,0.51061243};
-		up[]={-0.4145343,0.85637033,0.30788198};
-		aside[]={0.59625196,1.4901161e-008,0.8027975};
+		pos[]={9968.5371,187.86185,10064.879};
+		dir[]={-0.72903067,-0.34743255,0.58979511};
+		up[]={-0.27012569,0.93769085,0.21853393};
+		aside[]={0.62897325,5.4424163e-007,0.77745998};
 	};
 };
 binarizationWanted=0;
@@ -12434,6 +12434,18 @@ class CustomAttributes
 		name="Multiplayer";
 		class Attribute0
 		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="RespawnButton";
 			expression="true";
 			class Value
@@ -12442,18 +12454,6 @@ class CustomAttributes
 				{
 					singleType="SCALAR";
 					value=1;
-				};
-			};
-		};
-		class Attribute1
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="ARRAY";
 				};
 			};
 		};
@@ -78741,7 +78741,7 @@ class Mission
 														singleType="ARRAY";
 														class value
 														{
-															items=187;
+															items=193;
 															class Item0
 															{
 																class data
@@ -80236,6 +80236,54 @@ class Mission
 																{
 																	singleType="STRING";
 																	value="CUP_B_CivPack_WDL";
+																};
+															};
+															class Item187
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="CUP_H_USArmy_HelmetACH_GCOVERED_OCP";
+																};
+															};
+															class Item188
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="CUP_H_USArmy_HelmetACH_OCP";
+																};
+															};
+															class Item189
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="CUP_H_USArmy_HelmetACH_GCOVERED_Headset_OCP";
+																};
+															};
+															class Item190
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="CUP_H_USArmy_HelmetACH_ESS_OCP";
+																};
+															};
+															class Item191
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="CUP_H_USArmy_HelmetACH_ESS_Headset_OCP";
+																};
+															};
+															class Item192
+															{
+																class data
+																{
+																	singleType="STRING";
+																	value="CUP_H_USArmy_HelmetACH_Headset_OCP";
 																};
 															};
 														};
@@ -103687,14 +103735,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
 											singleType="BOOL";
-											value=1;
+											value=0;
 										};
 									};
 								};
@@ -103726,6 +103774,19 @@ class Mission
 								};
 								class Attribute4
 								{
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute5
+								{
 									property="unitInsignia";
 									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 									class Value
@@ -103734,19 +103795,6 @@ class Mission
 										{
 											singleType="STRING";
 											value="ADFU_insignia_sasr_patch";
-										};
-									};
-								};
-								class Attribute5
-								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
 										};
 									};
 								};
@@ -109582,14 +109630,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="unitInsignia";
-									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="USP_PATCH_NATO_ISAF_ROUNDEL_TAN";
+											singleType="BOOL";
+											value=0;
 										};
 									};
 								};
@@ -109621,6 +109669,19 @@ class Mission
 								};
 								class Attribute4
 								{
+									property="unitInsignia";
+									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="USP_PATCH_NATO_ISAF_ROUNDEL_TAN";
+										};
+									};
+								};
+								class Attribute5
+								{
 									property="hideObject";
 									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
 									class Value
@@ -109629,19 +109690,6 @@ class Mission
 										{
 											singleType="BOOL";
 											value=1;
-										};
-									};
-								};
-								class Attribute5
-								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
 										};
 									};
 								};
@@ -109785,14 +109833,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="unitInsignia";
-									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
-											singleType="STRING";
-											value="USP_PATCH_NATO_ISAF_ROUNDEL_TAN";
+											singleType="BOOL";
+											value=0;
 										};
 									};
 								};
@@ -109824,6 +109872,19 @@ class Mission
 								};
 								class Attribute4
 								{
+									property="unitInsignia";
+									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="USP_PATCH_NATO_ISAF_ROUNDEL_TAN";
+										};
+									};
+								};
+								class Attribute5
+								{
 									property="hideObject";
 									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
 									class Value
@@ -109832,19 +109893,6 @@ class Mission
 										{
 											singleType="BOOL";
 											value=1;
-										};
-									};
-								};
-								class Attribute5
-								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
 										};
 									};
 								};
@@ -114102,14 +114150,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
 									class Value
 									{
 										class data
 										{
 											singleType="BOOL";
-											value=0;
+											value=1;
 										};
 									};
 								};
@@ -114154,14 +114202,14 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
 											singleType="BOOL";
-											value=1;
+											value=0;
 										};
 									};
 								};
@@ -114678,14 +114726,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
 											singleType="BOOL";
-											value=1;
+											value=0;
 										};
 									};
 								};
@@ -114717,6 +114765,19 @@ class Mission
 								};
 								class Attribute4
 								{
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=1;
+										};
+									};
+								};
+								class Attribute5
+								{
 									property="unitInsignia";
 									expression="[_this,_value] call BIS_fnc_setUnitInsignia;";
 									class Value
@@ -114725,19 +114786,6 @@ class Mission
 										{
 											singleType="STRING";
 											value="Insignia_FODDSQUAD3";
-										};
-									};
-								};
-								class Attribute5
-								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
 										};
 									};
 								};
@@ -114832,14 +114880,14 @@ class Mission
 								};
 								class Attribute1
 								{
-									property="enableStamina";
-									expression="_this enablestamina _value;";
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
 									class Value
 									{
 										class data
 										{
 											singleType="BOOL";
-											value=0;
+											value=1;
 										};
 									};
 								};
@@ -114884,14 +114932,14 @@ class Mission
 								};
 								class Attribute5
 								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									property="enableStamina";
+									expression="_this enablestamina _value;";
 									class Value
 									{
 										class data
 										{
 											singleType="BOOL";
-											value=1;
+											value=0;
 										};
 									};
 								};
